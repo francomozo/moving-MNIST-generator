@@ -13,7 +13,7 @@ foo@bar:~$ bash download_dataset.sh
 
 ## Usage
 ```python
-foo@bar:~$ python generator -h
+foo@bar:~$ python generate.py -h
 python generate.py -h
 usage: generate.py [-h] [-d DATASET] [-nf N_FRAMES] [-ns N_SEQUENCES] [-no NUM_OBJECTS [NUM_OBJECTS ...]] [-sz IMAGE_SIZE] [-sp SPEED]
                    [-boe BOUNCE_OFF_EDGES]
