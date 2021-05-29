@@ -2,7 +2,7 @@
 * The moving MNIST dataset was generated using the classic MNIST dataset using code from https://github.com/vincent-leguen/PhyDNet.
 * Moving MNIST is a sequence-like dataset consisting of **N** sequences of length **L**. It is stored as N *.npy* files, each of shape *(L, S, S)* where **S** is the shape of the images. Each one is named *"movingMNIST_dataset_seqnum.py"* where *dataset* is *train/test/val* and *seqnum* the sequence number. 
 * The files are stored in *"data/dataset"* where *dataset* is *train/test/val*. 
-
+* The **MovingMnistDataset** class in *src.dataset.py* is a custom Dataset to iterate over the dataset and **example.ipynb** show how to use it and some data visualization.
 
 ## Obs
 * If the classic MNIST dataset is not in data/, download with:

@@ -1,5 +1,4 @@
 import gzip
-import math
 import os
 import random
 
@@ -11,6 +10,8 @@ from numpy.lib.type_check import imag
 
 # The code in this file is from https://github.com/vincent-leguen/PhyDNet
 # with some modifications (make digits grow in size, image size, movement, etc).
+
+# This file is for generating the dataset.
 
 
 def load_mnist(root, image_size):
@@ -38,6 +39,12 @@ def crop_2_size(arr, size):
 
 
 class MovingMNIST(data.Dataset):
+    """[summary]
+
+    Args:
+        data ([type]): [description]
+    """
+
     def __init__(self,
                  root,
                  n_frames=10,

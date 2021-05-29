@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from IPython.display import clear_output
 
 
-def plot_sequence(seq):
+def plot_sequence(seq, idxs):
     seq = seq.squeeze()
     C, _, _ = seq.shape
 
@@ -17,11 +17,11 @@ def plot_sequence(seq):
 
         ax.imshow(img)
         ax.axis('off')
-        ax.set_title(idx)
+        ax.set_title(idxs[idx])
     plt.show()
 
 
-def plot_on_spot(seq):
+def plot_on_spot(seq, idxs):
     seq = seq.squeeze()
     C, _, _ = seq.shape
 
@@ -30,7 +30,7 @@ def plot_on_spot(seq):
         img = seq[idx]
         plt.imshow(img)
         plt.axis('off')
-        plt.title(idx + 1)
+        plt.title(idxs[idx])
         plt.show()
         time.sleep(.5)
         clear_output(wait=True)
