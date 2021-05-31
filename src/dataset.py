@@ -47,8 +47,9 @@ class MovingMnistDataset(Dataset):
                 [np.load(self.path + self.filenames[self.seq_num])]
             ).squeeze()
 
-        frames_in = self.images[self.rel_idx: self.rel_idx+self.n_frames-1]
-        frames_out = self.images[self.n_frames-1].unsqueeze(dim=0)
+        frames_in = self.images[self.rel_idx: self.rel_idx+self.n_frames - 1]
+        frames_out = self.images[self.rel_idx +
+                                 self.n_frames - 1].unsqueeze(dim=0)
 
         # return indexes
         curr_idxs = np.arange(self.rel_idx, self.rel_idx + self.n_frames)
